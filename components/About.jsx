@@ -81,7 +81,7 @@ const qualificationData = [
     data: [
       {
         university: "Michigan State University",
-        qualification: "Bachelor of Science",
+        qualification: "BSc in Computer Science",
         years: "2022 - 2026",
       },
     ],
@@ -91,17 +91,17 @@ const qualificationData = [
     data: [
       {
         company: "Athletic Injury and Rehabilitation Labs - MSU",
-        qualification: "Software Developer",
+        role: "Software Developer",
         years: "May 2024 - Present",
       },
       {
         company: "Imagine Software Consultancy LLC",
-        qualification: "Software Development Team Lead",
+        role: "Software Development Team Lead",
         years: "Sep 2023 - May 2024",
       },
       {
         company: "VinBigData",
-        qualification: "Natural Language Processing Intern",
+        role: "Natural Language Processing Intern",
         years: "May 2023 - Aug 2023",
       },
     ],
@@ -159,10 +159,15 @@ const About = () => {
 
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
-                        return <div className="flex items-center gap-x-4 mx-auto xl:mx-0" key={index}>
-                          <div className="text-primary">{item.icon}</div>
-                          <div>{item.text}</div>
-                        </div>
+                        return (
+                          <div
+                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                            key={index}
+                          >
+                            <div className="text-primary">{item.icon}</div>
+                            <div>{item.text}</div>
+                          </div>
+                        );
                       })}
                     </div>
 
@@ -174,7 +179,80 @@ const About = () => {
                   </div>
                 </TabsContent>
                 <TabsContent value="qualifications">
-                  qualifications info
+                  <div>
+                    <h3 className="h3 mb-8 text-center xl:text-left">
+                      My Journey
+                    </h3>
+
+                    <div className="grid md:grid-cols-2 gap-y-8">
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <Briefcase />
+                          <h4 className="capitalize font-medium">
+                            {getData(qualificationData, "experience").title}
+                          </h4>
+                        </div>
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "experience").data.map(
+                            (item, index) => {
+                              const { company, role, years } = item;
+                              return (
+                                <div className="flex gap-x-8 group" key={index}>
+                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {company}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {role}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <GraduationCap size={28} />
+                          <h4 className="capitalize font-medium">
+                            {getData(qualificationData, "education").title}
+                          </h4>
+                        </div>
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "education").data.map(
+                            (item, index) => {
+                              const { university, qualification, years } = item;
+                              return (
+                                <div className="flex gap-x-8 group" key={index}>
+                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {university}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {qualification}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </TabsContent>
                 <TabsContent value="skills">skills info</TabsContent>
               </div>
