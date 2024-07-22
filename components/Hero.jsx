@@ -2,10 +2,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 
-import {
-  RiBriefcase4Fill,
-  RiTodoFill,
-} from "react-icons/ri";
+import { RiBriefcase4Fill, RiTodoFill } from "react-icons/ri";
 
 import DevImg from "./DevImg";
 import Badge from "./Badge";
@@ -18,7 +15,7 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Web Developer
+              Aspiring Web Developer / Software Engineer
             </div>
             <h1 className="h1 mb-4">Hello, my name is Ken Pham</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
@@ -31,9 +28,11 @@ const Hero = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
-              </Button>
+              <Link href="https://drive.google.com/file/d/1vUVUrq3N86KPnr66dLLBjPxDsTX4aq1k/view?usp=drive_link">
+                <Button variant="secondary" className="gap-x-2">
+                  Download CV <Download size={18} />
+                </Button>
+              </Link>
             </div>
             <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"
@@ -42,20 +41,23 @@ const Hero = () => {
           </div>
           <div className="hidden xl:flex relative">
             <Badge
-              containerStyles='absolute top-[24%] -left-[5rem]'
+              containerStyles="absolute top-[24%] -left-[5rem]"
               icon={<RiBriefcase4Fill />}
               endCountNum={2}
               badgeText="Years Of Experience"
             />
             <Badge
-              containerStyles='absolute top-[80%] -left-[1rem]'
+              containerStyles="absolute top-[80%] -left-[1rem]"
               icon={<RiTodoFill />}
               endCountNum={5}
-              endCountText='+'
-              badgeText="Relevant Projects"
+              endCountText="+"
+              badgeText="Technical Projects"
             />
             <div className="bg-hero_shape2_blue_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
-            <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc='/hero/developer.png'/>
+            <DevImg
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              imgSrc="/hero/developer.png"
+            />
           </div>
         </div>
       </div>
