@@ -79,7 +79,7 @@ const Projects = () => {
             })}
           </TabsList>
 
-          <div>
+          <div className="flex flex-col gap-y-4">
             {filteredProjects.map((project, index) => {
                 return <TabsContent value={category} key={index}>
                     <ProjectCard project={project}/>
