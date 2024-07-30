@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
         <Badge className="uppercase text-sm font-medium mb-2 top-4 left-5">
           {project.category}
         </Badge>
-        <div className="flex gap-x-8 justify-around">
+        <div className="flex gap-x-8 justify-between">
           <h4 className="h4 mb-1">{project.name}</h4>
           <div className="flex gap-x-8">
             <Link href={project.link}>
