@@ -30,7 +30,7 @@ const infoData = [
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "Bachelor in Computer Science",
+    text: "BSc in Computer Science",
   },
   {
     icon: <HomeIcon size={20} />,
@@ -43,16 +43,16 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "HTML, CSS",
+        name: "HTML, CSS, JavaScript",
       },
       {
-        name: "Front-end Development",
+        name: "React, Vue, Node.js, Express.js",
       },
       {
-        name: "JavaScript, Python",
+        name: "Python, C++, R, PyTorch",
       },
       {
-        name: "Back-end Development",
+        name: "Git, Firebase, Google Cloud",
       },
     ],
   },
@@ -63,10 +63,10 @@ const skillData = [
         imgPath: "/about/vscode.svg",
       },
       {
-        imgPath: "/about/figma.svg",
+        imgPath: "/about/git.svg",
       },
       {
-        imgPath: "/about/notion.svg",
+        imgPath: "/about/docker.svg",
       },
     ],
   },
@@ -78,7 +78,8 @@ const qualificationData = [
     data: [
       {
         university: "Michigan State University",
-        qualification: "BSc in Computer Science",
+        major: "BSc in Computer Science",
+        minor: "Minors in Data & Actuarial Science",
         years: "2022 - 2026",
       },
     ],
@@ -114,13 +115,13 @@ const About = () => {
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-          About me
+          About Me
         </h2>
         <div className="flex flex-col xl:flex-row">
           <div className="hidden xl:flex flex-1 relative">
             <DevImg
               containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
-              imgSrc="/about/developer.png"
+              imgSrc="/about/profile_pic2.png"
             />
           </div>
           <div className="flex-1">
@@ -144,14 +145,13 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      {" "}
                       Honors Junior majoring in Computer Science at Michigan
                       State University
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      I specialize in crafting intuitive websites with
-                      cutting-edge technology, delivering dynamic and engaging
-                      user experiences.
+                      Leveraging expertise in natural language processing,
+                      web/app development, and sports analytics to deliver
+                      impactful solutions.
                     </p>
 
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
@@ -199,7 +199,7 @@ const About = () => {
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                   </div>
                                   <div>
-                                    <div className="font-semibold text-xl leading-none mb-2">
+                                    <div className="font-semibold text-xl leading-none mb-4">
                                       {company}
                                     </div>
                                     <div className="text-lg leading-none text-muted-foreground mb-4">
@@ -225,7 +225,7 @@ const About = () => {
                         <div className="flex flex-col gap-y-8">
                           {getData(qualificationData, "education").data.map(
                             (item, index) => {
-                              const { university, qualification, years } = item;
+                              const { university, major, minor, years } = item;
                               return (
                                 <div className="flex gap-x-8 group" key={index}>
                                   <div className="h-[84px] w-[1px] bg-border relative ml-2">
@@ -235,8 +235,11 @@ const About = () => {
                                     <div className="font-semibold text-xl leading-none mb-2">
                                       {university}
                                     </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-2">
+                                      {major}
+                                    </div>
                                     <div className="text-lg leading-none text-muted-foreground mb-4">
-                                      {qualification}
+                                      {minor}
                                     </div>
                                     <div className="text-base font-medium">
                                       {years}
