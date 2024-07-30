@@ -11,17 +11,17 @@ const domOfInterestData = [
   {
     icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
     title: "Natural Language Processing",
-    description: "Will add later",
+    description: "Applying NLP techniques to extract meaningful insights from textual data, enhancing capabilities in areas like sentiment analysis, information retrieval, and language translation",
   },
   {
     icon: <Blocks size={72} strokeWidth={0.8} />,
     title: "Web/Mobile App Development",
-    description: "Will add later",
+    description: "Designing and developing robust web and mobile applications using modern frameworks and technologies, ensuring seamless user experiences and high performance.",
   },
   {
     icon: <Gem size={72} strokeWidth={0.8} />,
     title: "Sports Analytics",
-    description: "Will add later",
+    description: "Utilizing statistical methods and data analysis to evaluate and improve sports performance, with a focus on providing insights for coaches, athletes, and sports organizations.",
   },
 ];
 
@@ -29,7 +29,7 @@ const DomainsOfInterest = () => {
   return (
     <section className="mb-12 xl:mb-36">
       <div className="container mx-auto">
-        <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">
+        <h2 className="section-title mb-20 xl:mb-24 text-center mx-auto">
           My Domains of Interest
         </h2>
 
