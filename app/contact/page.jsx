@@ -10,7 +10,7 @@ const Contact = () => {
               <span className="w-[30px] h-[2px] bg-primary"></span>
               Wassup? 👋
             </div>
-            <h1 className="h1 max-w-md mb-8">Let's Work Together</h1>
+            <h1 className="h1 max-w-md mb-8">Let's Connect!</h1>
             <p className="subtitle max-w-[400px]">
               Feel free to reach out to me if you have any question or want to
               connect!
