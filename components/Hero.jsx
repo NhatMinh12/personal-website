@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
-
-import { RiBriefcase4Fill, RiTodoFill } from "react-icons/ri";
-
 import DevImg from "./DevImg";
-import Badge from "./Badge";
 import Socials from "./Socials";
 
 const Hero = () => {
@@ -15,12 +11,11 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Aspiring Web Developer / Software Engineer
+              Aspiring Software Engineer / Sports Enthusiast
             </div>
             <h1 className="h1 mb-4">This is Ken Pham</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself, my vocational journey
-              and what I engage in professionally.
+            Discover my journey, skills, and passions in web development and software engineering.
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
@@ -35,7 +30,7 @@ const Hero = () => {
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <Button variant="secondary" className="gap-x-2">
-                    Download CV <Download size={18} />
+                    Resume <Download size={18} />
                   </Button>
                 </a>
               </Link>
@@ -46,23 +41,10 @@ const Hero = () => {
             />
           </div>
           <div className="hidden xl:flex relative">
-            <Badge
-              containerStyles="absolute top-[24%] -left-[5rem]"
-              icon={<RiBriefcase4Fill />}
-              endCountNum={2}
-              badgeText="Years Of Experience"
-            />
-            <Badge
-              containerStyles="absolute top-[80%] -left-[1rem]"
-              icon={<RiTodoFill />}
-              endCountNum={5}
-              endCountText="+"
-              badgeText="Technical Projects"
-            />
             <div className="bg-hero_shape2_blue_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg
               containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-              imgSrc="/hero/developer.png"
+              imgSrc="/hero/profile_pic1.png"
             />
           </div>
         </div>
