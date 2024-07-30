@@ -8,11 +8,11 @@ const Contact = () => {
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
               <span className="w-[30px] h-[2px] bg-primary"></span>
-              Say Hello 👋
+              Wassup? 👋
             </div>
             <h1 className="h1 max-w-md mb-8">Let's Work Together</h1>
             <p className="subtitle max-w-[400px]">
-              Feel free to send me an email or a text if you have any question or want to
+              Feel free to reach out to me if you have any question or want to
               connect!
             </p>
             <div className="flex flex-col gap-y-4 xl:gap-y-10 mb-12 xl:mb-24 text-base xl:text-lg">
