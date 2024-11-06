@@ -26,7 +26,7 @@ const Hero = () => {
               <Link
                 passHref
                 legacyBehavior
-                href="https://drive.google.com/file/d/1vUVUrq3N86KPnr66dLLBjPxDsTX4aq1k/view?usp=drive_link"
+                href="https://drive.google.com/file/d/15iK2LWw06qCBUZ5wJanor__3_2UiX7qr/view?usp=drive_link"
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <Button variant="secondary" className="gap-x-2">
