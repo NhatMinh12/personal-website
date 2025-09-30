@@ -22,7 +22,7 @@ const infoData = [
   },
   {
     icon: <MailIcon size={20} />,
-    text: "phammin5@msu.edu",
+    text: "phamtuannhatminh@gmail.com",
   },
   {
     icon: <Calendar size={20} />,

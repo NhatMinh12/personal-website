@@ -18,7 +18,7 @@ const Contact = () => {
             <div className="flex flex-col gap-y-4 xl:gap-y-10 mb-12 xl:mb-24 text-base xl:text-lg">
               <div className="flex items-center gap-x-8">
                 <MailIcon size={18} className="text-primary" />
-                <div>phammin5@msu.edu</div>
+                <div>phamtuannhatminh@gmail.com</div>
               </div>
 
               <div className="flex items-center gap-x-8">
